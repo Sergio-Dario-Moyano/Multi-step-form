@@ -1,0 +1,10 @@
+@use "../utilities/mixins";
+/*header buttons*/
+
+.sidebar__number {
+  @include mixins.button-step();
+}
+
+.sidebar__info {
+  display: none;
+}

@@ -1,0 +1,17 @@
+@use "../utilities/variables";
+* {
+  box-sizing: border-box;
+}
+
+// body {
+//   background-color: variables.$Magnolia;
+// }
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
