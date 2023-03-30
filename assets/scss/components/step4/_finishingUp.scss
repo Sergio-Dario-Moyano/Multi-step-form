@@ -1,0 +1,41 @@
+@use "../../utilities/variables";
+
+
+.wrapper__group {
+  background-color: variables.$Magnolia;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+.wrapper__description__violet--modified {
+  color: variables.$Marine-blue;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.wrapper__description__text--modified {
+  color: variables.$Light-gray;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wrapper__description__normal {
+  color: variables.$Marine-blue;
+}
+
+.wrapper__description--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper__noBorder {
+  border: none;
+}
+
+.wrapper__tight {
+  height: 2.5rem;
+}
+
+.wrapper__border__bottom {
+  border-bottom: 1px solid variables.$Light-gray;
+  border-radius: 0px;
+}

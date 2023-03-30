@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: gray;
+}
+
 a {
   text-decoration: none;
 }
@@ -216,8 +220,49 @@ input[type=checked]:checked + .switch {
   font-size: 0.8rem;
 }
 
+.wrapper__group {
+  background-color: hsl(217, 100%, 97%);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.wrapper__description__violet--modified {
+  color: hsl(213, 96%, 18%);
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.wrapper__description__text--modified {
+  color: hsl(229, 24%, 87%);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wrapper__description__normal {
+  color: hsl(213, 96%, 18%);
+}
+
+.wrapper__description--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper__noBorder {
+  border: none;
+}
+
+.wrapper__tight {
+  height: 2.5rem;
+}
+
+.wrapper__border__bottom {
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+  border-radius: 0px;
+}
+
 /*step 2*/
 /*step 3*/
+/*step 4*/
 .container {
   max-width: 375px;
   margin: 0 auto;
