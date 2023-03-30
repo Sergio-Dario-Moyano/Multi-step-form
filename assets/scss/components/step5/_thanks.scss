@@ -1,0 +1,13 @@
+@use "../../utilities/variables";
+
+.wrapper__img {
+  text-align: center;
+}
+
+.step__title--center {
+  text-align: center;
+
+  p {
+    font-size: 1.03rem;
+  }
+}

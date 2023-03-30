@@ -9,7 +9,6 @@
   align-items: flex-end;
   margin-bottom: 7rem;
   
-  
   button {
     @include mixins.button-next();
   }
