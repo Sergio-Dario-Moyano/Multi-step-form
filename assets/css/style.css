@@ -135,10 +135,11 @@ body, html {
   display: block;
 }
 .wrapper__description__text {
+  font-weight: 500;
   color: hsl(213, 96%, 18%);
   margin-bottom: 0.3rem;
 }
-.wrapper__description__number {
+.wrapper__description__gray {
   color: hsl(229, 24%, 87%);
 }
 
@@ -190,7 +191,33 @@ input[type=checked]:checked + .switch {
   display: none;
 }
 
+.wrapper--modified {
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.wrapper__description {
+  flex-grow: 1;
+}
+.wrapper__check {
+  width: 18px;
+  height: 18px;
+  accent-color: hsl(243, 100%, 62%);
+}
+.wrapper__description__text {
+  display: block;
+  margin: 0;
+}
+.wrapper__description__gray--modified {
+  font-size: 0.8rem;
+  color: hsl(231, 11%, 63%);
+}
+.wrapper__description__violet {
+  color: hsl(243, 100%, 62%);
+  font-size: 0.8rem;
+}
+
 /*step 2*/
+/*step 3*/
 .container {
   max-width: 375px;
   margin: 0 auto;

@@ -1,0 +1,32 @@
+@use "../../utilities/variables";
+.wrapper {
+  &--modified {
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  &__description {
+    flex-grow: 1;
+  }
+
+  &__check {
+    width: 18px;
+    height: 18px;
+    accent-color: variables.$Purplish-blue;
+  }
+
+  &__description__text {
+    display: block;
+    margin: 0;
+  }
+  
+  &__description__gray--modified {
+    font-size: 0.8rem;
+    color: variables.$Cool-gray;
+  }
+
+  &__description__violet {
+    color: variables.$Purplish-blue;
+    font-size: 0.8rem;
+  }
+}

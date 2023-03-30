@@ -16,10 +16,11 @@
     }
   }
   &__description__text {
+    font-weight: 500;
     color: variables.$Marine-blue;
     margin-bottom: 0.3rem;
   }
-  &__description__number {
+  &__description__gray {
     color: variables.$Light-gray;
   }
 }
