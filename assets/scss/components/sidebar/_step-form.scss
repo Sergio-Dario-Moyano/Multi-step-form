@@ -1,5 +1,5 @@
-@use "../utilities/variables";
-@use "../utilities/mixins";
+@use "../../utilities/variables";
+@use "../../utilities/mixins";
 
 .step {
   position: relative;
@@ -9,8 +9,7 @@
 
   &__wrapper {
     width: 90%;
-
-    padding: 0 1rem;
+    padding: 0 1rem 2rem;
     background-color: variables.$Alabaster;
     border-radius: 0.5rem;
     position: absolute;
@@ -33,8 +32,6 @@
   }
   
   &__form {
-    // border: 1px solid red;
-    
     label {
       display: block;
       color: variables.$Marine-blue;
@@ -51,26 +48,5 @@
       padding-left: 1rem;
       margin-bottom: 1rem;
     }
-  }
-  
-  &__fill {
-    width:100%;
-    height: 30rem;
-    background-color: variables.$Magnolia;
-    display: flex;
-    align-items: flex-end;
-    
-    
-    button {
-      @include mixins.button-next();
-    }
-  }
-  
-  &__content__btn {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
-    background-color: variables.$Alabaster;
   }
 }

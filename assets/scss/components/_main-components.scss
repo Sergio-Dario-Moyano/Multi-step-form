@@ -1,2 +1,7 @@
-@use "./buttons";
-@use "./step-form";
+@use "./sidebar/sidebar";
+@use "./sidebar/sidebar-buttons";
+@use "./sidebar/step-form";
+@use "./sidebar/sidebar-footer";
+
+/*step 2*/
+@use "./step2/plan";

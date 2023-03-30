@@ -1,0 +1,34 @@
+@use "../../utilities/variables";
+@use "../../utilities/mixins";
+
+.step__fill {
+  width:100%;
+  height: 30rem;
+  background-color: variables.$Magnolia;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 7rem;
+  
+  
+  button {
+    @include mixins.button-next();
+  }
+}
+
+.step__content__btn {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: variables.$Alabaster;
+}
+
+.step__content__btn--modified {
+  justify-content: space-between;
+
+  .btn__goBack {
+    background-color: transparent;
+    color: variables.$Light-gray;
+    font-weight: 700;
+  }
+}

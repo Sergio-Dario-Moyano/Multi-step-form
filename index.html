@@ -13,139 +13,167 @@
 <body>
   <!-- Sidebar start -->
   <main class="container">
-    <section class="wrapper__sidebar">
+    <section class="sidebar__img">
+      <article class="sidebar__one">
+        <div class="sidebar__number">1</div>
+        <div class="sidebar__info">
+          Step 1
+          Your info
+        </div>
+      </article>
+      <article class="sidebar__two">
+        <div class="sidebar__number">2</div>
+        <div class="sidebar__info">
+          Step 2
+          Select plan
+        </div>
+      </article>
+      <article class="sidebar__three">
+        <div class="sidebar__number">3</div>
+        <div class="sidebar__info">
+          Step 3
+          Add-ons
+        </div>
+      </article>
+      <article class="sidebar__four">
+        <div class="sidebar__number">4</div>
+        <div class="sidebar__info">
+          Step 4
+          Summary
+        </div>
+      </article>
+    </section>
 
-      <section class="sidebar">
-        <article class="sidebar__one">
-          <div class="sidebar__number">1</div>
-          <div class="sidebar__info">
-            Step 1
-            Your info
-          </div>
-        </article>
-        <article class="sidebar__two">
-          <div class="sidebar__number">2</div>
-          <div class="sidebar__info">
-            Step 2
-            Select plan
-          </div>
-        </article>
-        <article class="sidebar__three">
-          <div class="sidebar__number">3</div>
-          <div class="sidebar__info">
-            Step 3
-            Add-ons
-          </div>
-        </article>
-        <article class="sidebar__four">
-          <div class="sidebar__number">4</div>
-          <div class="sidebar__info">
-            Step 4
-            Summary
-          </div>
-        </article>
-      </section>
+    <!-- Sidebar end -->
 
-      <!-- Sidebar end -->
+    <!-- Step 1 start -->
+    <section class="step">
+      <div class="step__wrapper">
+        <article class="step__title">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+        </article>
+        <article class="step__form">
+          <label class="step__label">Name</label>
+          <input type="text" class="step__input" placeholder="e.g. Stephen King" />
+          <label class="step__label">Email Address</label>
+          <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com" />
+          <label class="step__label">Phone Number</label>
+          <input type="text" class="step__input" placeholder="e.g. +1 234 567 890" />
+        </article>
+    </section>
+    <div class="step__fill">
+      <div class="step__content__btn">
+        <button type="button">Next Step</button>
+      </div>
+    </div>
+    </div>
+    <!-- Step 1 end -->
 
-      <!-- Step 1 start -->
-      <section class="step">
-        <div class="step__wrapper">
-          <article class="step__title">
-            <h1>Personal info</h1>
-            <p>Please provide your name, email address, and phone number.</p>
-          </article>
-          <article class="step__form">
-            <label class="step__label">Name</label>
-            <input type="text" class="step__input" placeholder="e.g. Stephen King"/> 
-            <label class="step__label">Email Address</label>
-            <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com"/> 
-            <label class="step__label">Phone Number</label>
-            <input type="text" class="step__input" placeholder="e.g. +1 234 567 890"/> 
-          </article>
-        </section>
-        <div class="step__fill">
-          <div class="step__content__btn">
-            <button type="button">Next Step</button>
+    <!-- Step 2 start -->
+    <section class="step">
+      <article class="step__wrapper step2__wrapper">
+        <article class="step__title">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+        </article>
+        <div class="wrapper">
+          <div class="wrapper__contain">
+            <img src="./assets/images/icon-arcade.svg" class="wrapper__img" alt="icono-arcade">
           </div>
+          <div class="wrapper__description">
+            <span class="wrapper__description__text">Arcade</span>
+            <span class="wrapper__description__number">$9/mo</span>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="wrapper__contain">
+            <img src="./assets/images/icon-advanced.svg" class="wrapper__img" alt="icono-arcade">
+          </div>
+          <div class="wrapper__description">
+            <span class="wrapper__description__text">Advanced</span>
+            <span class="wrapper__description__number">$12/mo</span>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="wrapper__contain">
+            <img src="./assets/images/icon-pro.svg" class="wrapper__img" alt="icono-arcade">
+          </div>
+          <div class="wrapper__description">
+            <span class="wrapper__description__text">Pro</span>
+            <span class="wrapper__description__number">$15/mo</span>
+          </div>
+        </div>
+        <div class="wrap__toggle">
+          <div class="wrap__toggle__text">Monthly</div>
+          <div>
+            <input type="checkbox" class="offscreen" id="toggle">
+            <label for="toggle" class="switch"></label>
+          </div>
+          <div class="wrap__toggle__text wrap__toggle__text--disabled">Yearly</div>
+        </div>
+      </article>
+      <div class="step__fill">
+        <div class="step__content__btn step__content__btn--modified">
+          <button type="button" class="btn__goBack">Go Back</button>
+          <button type="button">Next Step</button>
         </div>
       </div>
     </section>
+
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+
+    <!-- Pick add-ons
+    Add-ons help enhance your gaming experience.
+
+    Online service
+    Access to multiplayer games
+    +$1/mo
+
+    Larger storage
+    Extra 1TB of cloud save
+    +$2/mo
+
+    Customizable Profile
+    Custom theme on your profile
+    +$2/mo
+
+    Go Back
+    Next Step -->
+
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+
+    <!-- Finishing up
+    Double-check everything looks OK before confirming. -->
+
+    <!-- Dynamically add subscription and add-on selections here -->
+
+    <!-- Total (per month/year)
+
+    Go Back
+    Confirm -->
+
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+
+    <!-- Thank you!
+
+    Thanks for confirming your subscription! We hope you have fun
+    using our platform. If you ever need support, please feel free
+    to email us at support@loremgaming.com. -->
+
+    <!-- Step 5 end -->
+
   </main>
-  <!-- Step 1 end -->
-
-  <!-- Step 2 start -->
-
-  Select your plan
-  You have the option of monthly or yearly billing.
-
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step
-
-  <!-- Step 2 end -->
-
-  <!-- Step 3 start -->
-
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
-
-  Online service
-  Access to multiplayer games
-  +$1/mo
-
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
-
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
-
-  Go Back
-  Next Step
-
-  <!-- Step 3 end -->
-
-  <!-- Step 4 start -->
-
-  Finishing up
-  Double-check everything looks OK before confirming.
-
-  <!-- Dynamically add subscription and add-on selections here -->
-
-  Total (per month/year)
-
-  Go Back
-  Confirm
-
-  <!-- Step 4 end -->
-
-  <!-- Step 5 start -->
-
-  Thank you!
-
-  Thanks for confirming your subscription! We hope you have fun
-  using our platform. If you ever need support, please feel free
-  to email us at support@loremgaming.com.
-
-  <!-- Step 5 end -->
-
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 
 </html>
