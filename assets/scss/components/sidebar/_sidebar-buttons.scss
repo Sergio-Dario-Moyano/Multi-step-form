@@ -1,8 +1,13 @@
 @use "../../utilities/mixins";
-/*header buttons*/
+@use "../../utilities/variables";
 
 .sidebar__number {
   @include mixins.button-step();
+}
+
+.sidebar__paint {
+  background-color: variables.$Light-blue;
+  color: variables.$Marine-blue;
 }
 
 .sidebar__info {

@@ -2,15 +2,25 @@
 @use "../../utilities/mixins";
 
 .step__fill {
-  width:100%;
+  width: 100%;
   height: 30rem;
   background-color: variables.$Magnolia;
   display: flex;
   align-items: flex-end;
   margin-bottom: 7rem;
-  
-  button {
-    @include mixins.button-next();
+}
+
+.step__btn {
+  @include mixins.button-next();
+
+  &--back {
+    background-color: transparent;
+    color: variables.$Light-gray;
+    font-weight: 700;
+  }
+
+  &--confirm {
+    background-color: variables.$Purplish-blue;
   }
 }
 
@@ -20,14 +30,8 @@
   display: flex;
   justify-content: flex-end;
   background-color: variables.$Alabaster;
-}
 
-.step__content__btn--modified {
-  justify-content: space-between;
-
-  .btn__goBack {
-    background-color: transparent;
-    color: variables.$Light-gray;
-    font-weight: 700;
+  &--flex {
+    justify-content: space-between;
   }
 }

@@ -1,41 +1,42 @@
 @use "../../utilities/variables";
 
-
-.wrapper__group {
-  background-color: variables.$Magnolia;
-  padding: 1rem 0;
-  border-radius: 0.5rem;
-}
-.wrapper__description__violet--modified {
-  color: variables.$Marine-blue;
-  font-size: 1.1rem;
-  font-weight: bolder;
-}
-
-.wrapper__description__text--modified {
-  color: variables.$Light-gray;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.wrapper__description__normal {
-  color: variables.$Marine-blue;
-}
-
-.wrapper__description--flex {
+.finishing {
   display: flex;
   justify-content: space-between;
-}
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
 
-.wrapper__noBorder {
-  border: none;
-}
+  &__border {
+    border-bottom: 1px solid variables.$Light-gray;
+  }
 
-.wrapper__tight {
-  height: 2.5rem;
-}
+  &--noMargin {
+    margin: 0;
+  }
 
-.wrapper__border__bottom {
-  border-bottom: 1px solid variables.$Light-gray;
-  border-radius: 0px;
+  &__description__text {
+    color: variables.$Marine-blue;
+    font-weight: 700;
+
+  }
+
+  &__description__sub {
+    color: variables.$Light-gray;
+    font-size: 1rem;
+  }
+
+  &__description__price {
+    color: variables.$Marine-blue;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__total__price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: variables.$Purplish-blue;
+  }
 }

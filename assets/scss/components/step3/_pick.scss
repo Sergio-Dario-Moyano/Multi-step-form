@@ -1,13 +1,13 @@
 @use "../../utilities/variables";
-.wrapper {
-  &--modified {
-    justify-content: flex-start;
-    padding: 1rem;
-  }
 
-  &__description {
-    flex-grow: 1;
-  }
+.pick {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid variables.$Light-gray;
+  border-radius: 0.5rem;
+  padding: 1rem;
 
   &__check {
     width: 18px;
@@ -16,16 +16,16 @@
   }
 
   &__description__text {
-    display: block;
-    margin: 0;
+    font-weight: bold;
+    color: variables.$Marine-blue;
   }
-  
-  &__description__gray--modified {
+
+  &__description__sub {
     font-size: 0.8rem;
     color: variables.$Cool-gray;
   }
 
-  &__description__violet {
+  &__description__price {
     color: variables.$Purplish-blue;
     font-size: 0.8rem;
   }

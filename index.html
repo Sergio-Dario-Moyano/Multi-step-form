@@ -15,28 +15,28 @@
   <main class="container">
     <section class="sidebar__img">
       <article class="sidebar__one">
-        <div class="sidebar__number">1</div>
+        <div class="sidebar__number sidebar__paint" id="sidebar__number__1">1</div>
         <div class="sidebar__info">
           Step 1
           Your info
         </div>
       </article>
       <article class="sidebar__two">
-        <div class="sidebar__number">2</div>
+        <div class="sidebar__number" id="sidebar__number__2">2</div>
         <div class="sidebar__info">
           Step 2
           Select plan
         </div>
       </article>
       <article class="sidebar__three">
-        <div class="sidebar__number">3</div>
+        <div class="sidebar__number" id="sidebar__number__3">3</div>
         <div class="sidebar__info">
           Step 3
           Add-ons
         </div>
       </article>
       <article class="sidebar__four">
-        <div class="sidebar__number">4</div>
+        <div class="sidebar__number" id="sidebar__number__4">4</div>
         <div class="sidebar__info">
           Step 4
           Summary
@@ -47,76 +47,80 @@
     <!-- Sidebar end -->
 
     <!-- Step 1 start -->
-    <section class="step">
-      <div class="step__wrapper">
-        <article class="step__title">
-          <h1>Personal info</h1>
-          <p>Please provide your name, email address, and phone number.</p>
-        </article>
-        <article class="step__form">
-          <label class="step__label">Name</label>
-          <input type="text" class="step__input" placeholder="e.g. Stephen King" />
-          <label class="step__label">Email Address</label>
-          <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com" />
-          <label class="step__label">Phone Number</label>
-          <input type="text" class="step__input" placeholder="e.g. +1 234 567 890" />
-        </article>
-    </section>
-    <div class="step__fill">
-      <div class="step__content__btn">
-        <button type="button">Next Step</button>
+    <section class="step__content" id="step__content">
+      <section class="step">
+        <div class="step__wrapper">
+          <article class="step__title">
+            <h2>Personal info</h2>
+            <p>Please provide your name, email address, and phone number.</p>
+          </article>
+          <article class="step__form">
+            <label class="step__label">Name</label>
+            <input type="text" class="step__input" placeholder="e.g. Stephen King" />
+            <label class="step__label">Email Address</label>
+            <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com" />
+            <label class="step__label">Phone Number</label>
+            <input type="text" class="step__input" placeholder="e.g. +1 234 567 890" />
+          </article>
+        </div>
+      </section>
+      <div class="step__fill">
+        <div class="step__content__btn">
+          <button type="button" class="step__btn" id="btn__one">Next Step</button>
+        </div>
       </div>
-    </div>
-    </div>
+    </section>
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <section class="step">
-      <article class="step__wrapper">
-        <article class="step__title">
-          <h1>Select your plan</h1>
-          <p>You have the option of monthly or yearly billing.</p>
-        </article>
-        <div class="wrapper">
-          <div class="wrapper__contain">
-            <img src="./assets/images/icon-arcade.svg" class="wrapper__img" alt="icono-arcade">
-          </div>
-          <div class="wrapper__description">
-            <span class="wrapper__description__text">Arcade</span>
-            <span class="wrapper__description__gray">$9/mo</span>
+    <section class="step__content" id="step__content">
+      <section class="step">
+        <div class="step__wrapper">
+          <article class="step__title">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
+          </article>
+          <article class="plan">
+            <div class="plan__contain">
+              <img src="./assets/images/icon-arcade.svg" class="plan__img" alt="icono-arcade">
+            </div>
+            <div class="plan__description">
+              <div class="plan__description__text">Arcade</div>
+              <div class="plan__description__price">$9/mo</div>
+            </div>
+          </article>
+          <article class="plan">
+            <div class="plan__contain">
+              <img src="./assets/images/icon-advanced.svg" class="plan__img" alt="icono-arcade">
+            </div>
+            <div class="plan__description">
+              <div class="plan__description__text">Advance</div>
+              <div class="plan__description__price">$12/mo</div>
+            </div>
+          </article>
+          <article class="plan">
+            <div class="plan__contain">
+              <img src="./assets/images/icon-pro.svg" class="plan__img" alt="icono-arcade">
+            </div>
+            <div class="plan__description">
+              <div class="plan__description__text">Pro</div>
+              <div class="plan__description__price">$15/mo</div>
+            </div>
+          </article>
+          <div class="plan__toggle">
+            <div class="plan__toggle__text">Monthly</div>
+            <div>
+              <input type="checkbox" class="plan__offscreen" id="toggle">
+              <label for="toggle" class="plan__switch"></label>
+            </div>
+            <div class="plan__toggle__text plan__toggle__text--disabled">Yearly</div>
           </div>
         </div>
-        <div class="wrapper">
-          <div class="wrapper__contain">
-            <img src="./assets/images/icon-advanced.svg" class="wrapper__img" alt="icono-arcade">
-          </div>
-          <div class="wrapper__description">
-            <span class="wrapper__description__text">Advanced</span>
-            <span class="wrapper__description__gray">$12/mo</span>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="wrapper__contain">
-            <img src="./assets/images/icon-pro.svg" class="wrapper__img" alt="icono-arcade">
-          </div>
-          <div class="wrapper__description">
-            <span class="wrapper__description__text">Pro</span>
-            <span class="wrapper__description__gray">$15/mo</span>
-          </div>
-        </div>
-        <div class="wrap__toggle">
-          <div class="wrap__toggle__text">Monthly</div>
-          <div>
-            <input type="checkbox" class="offscreen" id="toggle">
-            <label for="toggle" class="switch"></label>
-          </div>
-          <div class="wrap__toggle__text wrap__toggle__text--disabled">Yearly</div>
-        </div>
-      </article>
+      </section>
       <div class="step__fill">
-        <div class="step__content__btn step__content__btn--modified">
-          <button type="button" class="btn__goBack">Go Back</button>
-          <button type="button">Next Step</button>
+        <div class="step__content__btn step__content__btn--flex">
+          <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
+          <button type="button" class="step__btn" id="btn__one">Next Step</button>
         </div>
       </div>
     </section>
@@ -124,49 +128,50 @@
     <!-- Step 2 end -->
 
     <!-- Step 3 start -->
-    <section class="step">
-      <article class="step__wrapper">
-        <article class="step__title">
-          <h1>Pick add-ons</h1>
-          <p>Add-ons help enhance your gaming experience.</p>
-        </article>
-        <div class="wrapper wrapper--modified">
-          <div><input type="checkbox" class="wrapper__check" /></div>
-          <div class="wrapper__description">
-            <span class="wrapper__description__text">Online service</span>
-            <span class="wrapper__description__gray wrapper__description__gray--modified">Access to multiplayer
-              games</span>
-          </div>
-          <div>
-            <span class="wrapper__description__violet">+$1/mo</span>
-          </div>
+
+    <section class="step__content" id="step__content">
+      <section class="step">
+        <div class="step__wrapper">
+          <article class="step__title">
+            <h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </article>
+          <article class="pick">
+            <div class="pick__contain">
+              <input type="checkbox" class="pick__check" />
+            </div>
+            <div class="pick__description">
+              <div class="pick__description__text">Online service</div>
+              <div class="pick__description__sub">Access to multiplayer games</div>
+            </div>
+            <div class="pick__description__price">+$1/mo</div>
+          </article>
+          <article class="pick">
+            <div class="pick__contain">
+              <input type="checkbox" class="pick__check" />
+            </div>
+            <div class="pick__description">
+              <div class="pick__description__text">Larger storage</div>
+              <div class="pick__description__sub">Extra 1TB of cloud save</div>
+            </div>
+            <div class="pick__description__price">+$2/mo</div>
+          </article>
+          <article class="pick">
+            <div class="pick__contain">
+              <input type="checkbox" class="pick__check" />
+            </div>
+            <div class="pick__description">
+              <div class="pick__description__text">Customizable profile</div>
+              <div class="pick__description__sub">Custom theme on your profile</div>
+            </div>
+            <div class="pick__description__price">+$2/mo</div>
+          </article>
         </div>
-        <div class="wrapper wrapper--modified">
-          <div><input type="checkbox" class="wrapper__check" /></div>
-          <div class="wrapper__description">
-            <span class="wrapper__description__text">Larger storage</span>
-            <span class="wrapper__description__gray wrapper__description__gray--modified">Extra 1TB of cloud save</span>
-          </div>
-          <div>
-            <span class="wrapper__description__violet">+$2/mo</span>
-          </div>
-        </div>
-        <div class="wrapper wrapper--modified">
-          <div><input type="checkbox" class="wrapper__check" /></div>
-          <div class="wrapper__description">
-            <span class="wrapper__description__text">Customizable Profile</span>
-            <span class="wrapper__description__gray wrapper__description__gray--modified">Custom theme on your
-              profile</span>
-          </div>
-          <div>
-            <span class="wrapper__description__violet">+$2/mo</span>
-          </div>
-        </div>
-      </article>
+      </section>
       <div class="step__fill">
-        <div class="step__content__btn step__content__btn--modified">
-          <button type="button" class="btn__goBack">Go Back</button>
-          <button type="button">Next Step</button>
+        <div class="step__content__btn step__content__btn--flex">
+          <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
+          <button type="button" class="step__btn" id="btn__one">Next Step</button>
         </div>
       </div>
     </section>
@@ -175,46 +180,38 @@
 
     <!-- Step 4 start -->
 
-    <section class="step">
-      <article class="step__wrapper">
-        <article class="step__title">
-          <h1>Finishing up</h1>
-          <p>Double-check everything looks OK before confirming.</p>
-        </article>
-        <div class="wrapper__group">
-          <div class="wrapper wrapper__noBorder wrapper__border__bottom">
-            <div class="wrapper__description ">
-              <span class="wrapper__description__text">Arcade (Monthly)</span>
-              <span class="wrapper__description__text wrapper__description__text--modified">Change</span>
+    <section class="step__content" id="step__content">
+      <section class="step">
+        <div class="step__wrapper">
+          <article class="step__title">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confirming.</p>
+          </article>
+          <article class="finishing finishing__border">
+            <div class="finishing__description">
+              <div class="finishing__description__text">Arcade (Monthly)</div>
+              <div class="finishing__description__sub">Change</div>
             </div>
-            <div>
-              <span class="wrapper__description__violet wrapper__description__violet--modified ">$9/mo</span>
-            </div>
-          </div>
-          <div class="wrapper wrapper__noBorder wrapper__tight ">
-            <div class="wrapper__description wrapper__description--flex">
-              <span class="wrapper__description__text wrapper__description__text--modified">Oneline service</span>
-              <span class="wrapper__description__gray wrapper__description__normal">+$1/mo</span>
-            </div>
-          </div>
-          <div class="wrapper wrapper__noBorder wrapper__tight ">
-            <div class="wrapper__description wrapper__description--flex">
-              <span class="wrapper__description__text wrapper__description__text--modified">Larger storage</span>
-              <span class="wrapper__description__gray wrapper__description__normal">+$2/mo</span>
-            </div>
-          </div>
+            <div class="finishing__description__price finishing__description__price--bold">$9/mo</div>
+          </article>
+          <article class="finishing finishing--noMargin">
+            <div class="finishing__description__sub">Online service</div>
+            <div class="finishing__description__price">+$1/mo</div>
+          </article>
+          <article class="finishing finishing--noMargin">
+            <div class="finishing__description__sub">Larger storage</div>
+            <div class="finishing__description__price">+$2/mo</div>
+          </article>
+          <article class="finishing">
+            <div class="finishing__description__sub">Total (per month)</div>
+            <div class="finishing__total__price">+$12/mo</div>
+          </article>
         </div>
-        <div class="wrapper wrapper__noBorder ">
-          <div class="wrapper__description wrapper__description--flex">
-            <span class="wrapper__description__text wrapper__description__text--modified">Total (per month/year)</span>
-            <span class="wrapper__description__gray wrapper__description__gray--modified">+$12/mo</span>
-          </div>
-        </div>
-      </article>
+      </section>
       <div class="step__fill">
-        <div class="step__content__btn step__content__btn--modified">
-          <button type="button" class="btn__goBack">Go Back</button>
-          <button type="button">Confirm</button>
+        <div class="step__content__btn step__content__btn--flex">
+          <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
+          <button type="button" class="step__btn step__btn--confirm" id="btn__one">Confirm</button>
         </div>
       </div>
     </section>
@@ -229,7 +226,7 @@
           <img src="./assets/images/icon-thank-you.svg" alt="icon-thanks" class="wrapper__img__thanks">
         </div>
         <article class="step__title step__title--center">
-          <h1>Thank you!</h1>
+          <h2>Thank you!</h2>
           <p>
             Thanks for confirming your subscription! We hope you have fun
             using our platform. If you ever need support, please feel free
@@ -241,12 +238,13 @@
     </section>
 
     <!-- Step 5 end -->
-
   </main>
+
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Sergio Moyano</a>.
   </div> -->
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

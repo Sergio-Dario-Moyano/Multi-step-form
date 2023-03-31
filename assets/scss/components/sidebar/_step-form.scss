@@ -18,19 +18,19 @@
 
   &__title {
 
-    h1 {
+    h2 {
       font-size: 1.7rem;
       margin: 1.5rem 0 1rem;
       color: variables.$Marine-blue;
     }
-    
+
     p {
       font-size: 1.1rem;
       line-height: 1.4;
       color: variables.$Light-gray;
     }
   }
-  
+
   &__form {
     label {
       display: block;
@@ -38,13 +38,13 @@
       font-weight: 500;
       margin-bottom: 0.2rem;
     }
-    
+
     input {
       height: 2.5rem;
       width: 100%;
       border-radius: 0.2rem;
       outline: none;
-      border: 1px solid #000;
+      border: 1px solid variables.$Light-gray;
       padding-left: 1rem;
       margin-bottom: 1rem;
     }
