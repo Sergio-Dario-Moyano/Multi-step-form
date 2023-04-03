@@ -22,11 +22,15 @@ body, html {
   font-family: "Ubuntu", sans-serif;
 }
 
+.move__left {
+  transition: all 0.3s ease-in-out;
+}
+
 .sidebar__img {
   background-image: url(../images/bg-sidebar-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  max-width: 100%;
   height: 11rem;
   padding: 2rem 0;
   display: flex;
@@ -59,6 +63,13 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.step__content {
+  width: 16.6%;
+  display: inline-block;
+}
+.step__content--final {
+  margin: -2rem 0;
 }
 .step__wrapper {
   width: 90%;
@@ -100,7 +111,9 @@ body, html {
   background-color: hsl(217, 100%, 97%);
   display: flex;
   align-items: flex-end;
-  margin-bottom: 7rem;
+}
+.step__fill--modified {
+  padding: 0.8rem 0;
 }
 
 .step__btn {
@@ -271,9 +284,64 @@ input[type=checkbox]:checked + .plan__switch {
 /*step 4*/
 /*step 5*/
 .container {
-  max-width: 375px;
+  min-width: 375px;
+  max-width: 1440px;
+  overflow: hidden;
   margin: 0 auto;
   background-color: hsl(0, 0%, 100%);
+}
+.container__all {
+  display: inline-block;
+  width: 600%;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 0.6fr 3fr;
+    padding: 2rem 2rem 2rem 0;
+  }
+  .sidebar__img {
+    height: 100%;
+    background-image: url(../images/bg-sidebar-desktop.svg);
+    background-size: contain;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    z-index: 100;
+  }
+  .sidebar__info {
+    display: block;
+  }
+  .sidebar__info__number {
+    font-size: 0.8rem;
+    color: hsl(231, 11%, 63%);
+  }
+  .sidebar__info__text {
+    color: hsl(0, 0%, 100%);
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .sidebar__numbers {
+    display: flex;
+    gap: 1rem;
+  }
+  .step__wrapper {
+    top: -12px;
+  }
+  .step__fill, .step__wrapper {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .step__content {
+    margin-left: 0.3rem;
+  }
+  .step__content__btn {
+    background-color: hsl(0, 0%, 100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

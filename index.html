@@ -14,40 +14,42 @@
   <!-- Sidebar start -->
   <main class="container">
     <section class="sidebar__img">
-      <article class="sidebar__one">
+      <article class="sidebar__one sidebar__numbers">
         <div class="sidebar__number sidebar__paint" id="sidebar__number__1">1</div>
         <div class="sidebar__info">
-          Step 1
-          Your info
+          <div class="sidebar__info__number">STEP 1</div>
+          <div class="sidebar__info__text">YOUR INFO</div>
         </div>
       </article>
-      <article class="sidebar__two">
+      <article class="sidebar__two sidebar__numbers">
         <div class="sidebar__number" id="sidebar__number__2">2</div>
         <div class="sidebar__info">
-          Step 2
-          Select plan
+          <div class="sidebar__info__number">STEP 2</div>
+          <div class="sidebar__info__text">SELECT PLAN</div>
         </div>
       </article>
-      <article class="sidebar__three">
+      <article class="sidebar__three sidebar__numbers">
         <div class="sidebar__number" id="sidebar__number__3">3</div>
         <div class="sidebar__info">
-          Step 3
-          Add-ons
+          <div class="sidebar__info__number">STEP 3</div>
+          <div class="sidebar__info__text">ADD-ONS</div>
         </div>
       </article>
-      <article class="sidebar__four">
+      <article class="sidebar__four sidebar__numbers">
         <div class="sidebar__number" id="sidebar__number__4">4</div>
         <div class="sidebar__info">
-          Step 4
-          Summary
+          <div class="sidebar__info__number">STEP 4</div>
+          <div class="sidebar__info__text">SUMMARY</div>
         </div>
       </article>
     </section>
 
     <!-- Sidebar end -->
 
+    <section class="container__all">
+
     <!-- Step 1 start -->
-    <section class="step__content" id="step__content">
+    <section class="step__content" id="step__content1">
       <section class="step">
         <div class="step__wrapper">
           <article class="step__title">
@@ -65,15 +67,15 @@
         </div>
       </section>
       <div class="step__fill">
-        <div class="step__content__btn">
-          <button type="button" class="step__btn" id="btn__one">Next Step</button>
+          <div class="step__content__btn">
+            <button type="button" class="step__btn" id="btn__one">Next Step</button>
         </div>
       </div>
     </section>
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <section class="step__content" id="step__content">
+    <section class="step__content" id="step__content2">
       <section class="step">
         <div class="step__wrapper">
           <article class="step__title">
@@ -120,7 +122,7 @@
       <div class="step__fill">
         <div class="step__content__btn step__content__btn--flex">
           <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
-          <button type="button" class="step__btn" id="btn__one">Next Step</button>
+          <button type="button" class="step__btn" id="btn__two">Next Step</button>
         </div>
       </div>
     </section>
@@ -129,7 +131,7 @@
 
     <!-- Step 3 start -->
 
-    <section class="step__content" id="step__content">
+    <section class="step__content" id="step__content3">
       <section class="step">
         <div class="step__wrapper">
           <article class="step__title">
@@ -170,8 +172,8 @@
       </section>
       <div class="step__fill">
         <div class="step__content__btn step__content__btn--flex">
-          <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
-          <button type="button" class="step__btn" id="btn__one">Next Step</button>
+          <button type="button" class="step__btn step__btn--back" id="step__goBack__three">Go Back</button>
+          <button type="button" class="step__btn" id="btn__three">Next Step</button>
         </div>
       </div>
     </section>
@@ -180,7 +182,7 @@
 
     <!-- Step 4 start -->
 
-    <section class="step__content" id="step__content">
+    <section class="step__content" id="step__content4">
       <section class="step">
         <div class="step__wrapper">
           <article class="step__title">
@@ -210,8 +212,8 @@
       </section>
       <div class="step__fill">
         <div class="step__content__btn step__content__btn--flex">
-          <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
-          <button type="button" class="step__btn step__btn--confirm" id="btn__one">Confirm</button>
+          <button type="button" class="step__btn step__btn--back" id="step__goBack__four">Go Back</button>
+          <button type="button" class="step__btn step__btn--confirm" id="btn__four">Confirm</button>
         </div>
       </div>
     </section>
@@ -220,30 +222,37 @@
 
     <!-- Step 5 start -->
 
-    <section class="step">
-      <article class="step__wrapper">
-        <div class="wrapper__img">
-          <img src="./assets/images/icon-thank-you.svg" alt="icon-thanks" class="wrapper__img__thanks">
-        </div>
-        <article class="step__title step__title--center">
-          <h2>Thank you!</h2>
-          <p>
-            Thanks for confirming your subscription! We hope you have fun
-            using our platform. If you ever need support, please feel free
-            to email us at support@loremgaming.com.
-          </p>
+    <section class="step__content step__content--final" id="step__content5">
+      <section class="step">
+
+        <article class="step__wrapper">
+          <div class="wrapper__img">
+            <img src="./assets/images/icon-thank-you.svg" alt="icon-thanks" class="wrapper__img__thanks">
+          </div>
+          <article class="step__title step__title--center">
+            <h2>Thank you!</h2>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </p>
+          </article>
         </article>
-      </article>
-      <div class="step__fill"></div>
+      </section>
+      <div class="step__fill step__fill--modified"></div>
     </section>
 
     <!-- Step 5 end -->
+  </section>
+
   </main>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Sergio Moyano</a>.
   </div> -->
+
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

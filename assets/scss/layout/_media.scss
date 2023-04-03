@@ -1,7 +1,74 @@
 @use "../utilities/variables";
 
 .container {
-  max-width: 375px;
+  min-width: 375px;
+  max-width: 1440px;
+  overflow: hidden;
   margin: 0 auto;
   background-color: variables.$White;
+  
+  &__all {
+    display: inline-block;
+    width: 600%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: variables.$White;
+  }
+
+  .container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 0.6fr 3fr;
+    padding: 2rem 2rem 2rem 0;
+  }
+
+  .sidebar__img {
+    height: 100%;
+    background-image: url(../images/bg-sidebar-desktop.svg);
+    background-size: contain;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    z-index: 100;
+  }
+
+  .sidebar__info {
+    display: block;
+
+    &__number {
+      font-size: 0.8rem;
+      color: variables.$Cool-gray;
+    }
+
+    &__text {
+      color: variables.$White;
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+  }
+
+  .sidebar__numbers {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .step__wrapper {
+    top: -12px;
+  }
+
+  .step__fill, .step__wrapper {
+    background-color: variables.$White;
+  }
+
+  .step__content {
+    margin-left: 0.3rem;
+
+    &__btn {
+      background-color: variables.$White;
+    }
+  }
+
 }

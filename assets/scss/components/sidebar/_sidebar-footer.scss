@@ -7,7 +7,11 @@
   background-color: variables.$Magnolia;
   display: flex;
   align-items: flex-end;
-  margin-bottom: 7rem;
+  // border: 1px solid red;
+
+  &--modified {
+    padding: 0.8rem 0
+  }
 }
 
 .step__btn {
