@@ -1,4 +1,5 @@
 @use "../../utilities/variables";
+@use "../../utilities/extra";
 
 .plan {
   border: 1px solid variables.$Light-gray;
@@ -60,6 +61,10 @@
   &__offscreen {
     display: none;
   }
+}
+
+.check__step__2 {
+  display: none;
 }
 
 input[type='checkbox']:checked+.plan__switch::after {

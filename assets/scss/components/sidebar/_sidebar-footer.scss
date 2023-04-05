@@ -3,11 +3,10 @@
 
 .step__fill {
   width: 100%;
-  height: 30rem;
   background-color: variables.$Magnolia;
   display: flex;
   align-items: flex-end;
-  // border: 1px solid red;
+  position: relative;
 
   &--modified {
     padding: 0.8rem 0
@@ -30,10 +29,12 @@
 
 .step__content__btn {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   display: flex;
   justify-content: flex-end;
   background-color: variables.$Alabaster;
+  position: fixed;
+  bottom: 0;
 
   &--flex {
     justify-content: space-between;

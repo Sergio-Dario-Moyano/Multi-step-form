@@ -13,238 +13,235 @@
 <body>
   <!-- Sidebar start -->
   <main class="container">
-    <section class="sidebar__img">
-      <article class="sidebar__one sidebar__numbers">
-        <div class="sidebar__number sidebar__paint" id="sidebar__number__1">1</div>
-        <div class="sidebar__info">
-          <div class="sidebar__info__number">STEP 1</div>
-          <div class="sidebar__info__text">YOUR INFO</div>
-        </div>
-      </article>
-      <article class="sidebar__two sidebar__numbers">
-        <div class="sidebar__number" id="sidebar__number__2">2</div>
-        <div class="sidebar__info">
-          <div class="sidebar__info__number">STEP 2</div>
-          <div class="sidebar__info__text">SELECT PLAN</div>
-        </div>
-      </article>
-      <article class="sidebar__three sidebar__numbers">
-        <div class="sidebar__number" id="sidebar__number__3">3</div>
-        <div class="sidebar__info">
-          <div class="sidebar__info__number">STEP 3</div>
-          <div class="sidebar__info__text">ADD-ONS</div>
-        </div>
-      </article>
-      <article class="sidebar__four sidebar__numbers">
-        <div class="sidebar__number" id="sidebar__number__4">4</div>
-        <div class="sidebar__info">
-          <div class="sidebar__info__number">STEP 4</div>
-          <div class="sidebar__info__text">SUMMARY</div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Sidebar end -->
-
-    <section class="container__all">
-
-    <!-- Step 1 start -->
-    <section class="step__content" id="step__content1">
-      <section class="step">
-        <div class="step__wrapper">
-          <article class="step__title">
-            <h2>Personal info</h2>
-            <p>Please provide your name, email address, and phone number.</p>
-          </article>
-          <article class="step__form">
-            <label class="step__label">Name</label>
-            <input type="text" class="step__input" placeholder="e.g. Stephen King" />
-            <label class="step__label">Email Address</label>
-            <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com" />
-            <label class="step__label">Phone Number</label>
-            <input type="text" class="step__input" placeholder="e.g. +1 234 567 890" />
-          </article>
-        </div>
-      </section>
-      <div class="step__fill">
-          <div class="step__content__btn">
-            <button type="button" class="step__btn" id="btn__one">Next Step</button>
-        </div>
-      </div>
-    </section>
-    <!-- Step 1 end -->
-
-    <!-- Step 2 start -->
-    <section class="step__content" id="step__content2">
-      <section class="step">
-        <div class="step__wrapper">
-          <article class="step__title">
-            <h2>Select your plan</h2>
-            <p>You have the option of monthly or yearly billing.</p>
-          </article>
-          <article class="plan">
-            <div class="plan__contain">
-              <img src="./assets/images/icon-arcade.svg" class="plan__img" alt="icono-arcade">
-            </div>
-            <div class="plan__description">
-              <div class="plan__description__text">Arcade</div>
-              <div class="plan__description__price">$9/mo</div>
-            </div>
-          </article>
-          <article class="plan">
-            <div class="plan__contain">
-              <img src="./assets/images/icon-advanced.svg" class="plan__img" alt="icono-arcade">
-            </div>
-            <div class="plan__description">
-              <div class="plan__description__text">Advance</div>
-              <div class="plan__description__price">$12/mo</div>
-            </div>
-          </article>
-          <article class="plan">
-            <div class="plan__contain">
-              <img src="./assets/images/icon-pro.svg" class="plan__img" alt="icono-arcade">
-            </div>
-            <div class="plan__description">
-              <div class="plan__description__text">Pro</div>
-              <div class="plan__description__price">$15/mo</div>
-            </div>
-          </article>
-          <div class="plan__toggle">
-            <div class="plan__toggle__text">Monthly</div>
-            <div>
-              <input type="checkbox" class="plan__offscreen" id="toggle">
-              <label for="toggle" class="plan__switch"></label>
-            </div>
-            <div class="plan__toggle__text plan__toggle__text--disabled">Yearly</div>
+    <section class="container__wrapper">
+      <section class="sidebar__img">
+        <article class="sidebar__one sidebar__numbers">
+          <div class="sidebar__number sidebar__paint" id="sidebar__number__1">1</div>
+          <div class="sidebar__info">
+            <div class="sidebar__info__number">STEP 1</div>
+            <div class="sidebar__info__text">YOUR INFO</div>
           </div>
-        </div>
-      </section>
-      <div class="step__fill">
-        <div class="step__content__btn step__content__btn--flex">
-          <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
-          <button type="button" class="step__btn" id="btn__two">Next Step</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Step 2 end -->
-
-    <!-- Step 3 start -->
-
-    <section class="step__content" id="step__content3">
-      <section class="step">
-        <div class="step__wrapper">
-          <article class="step__title">
-            <h2>Pick add-ons</h2>
-            <p>Add-ons help enhance your gaming experience.</p>
-          </article>
-          <article class="pick">
-            <div class="pick__contain">
-              <input type="checkbox" class="pick__check" />
-            </div>
-            <div class="pick__description">
-              <div class="pick__description__text">Online service</div>
-              <div class="pick__description__sub">Access to multiplayer games</div>
-            </div>
-            <div class="pick__description__price">+$1/mo</div>
-          </article>
-          <article class="pick">
-            <div class="pick__contain">
-              <input type="checkbox" class="pick__check" />
-            </div>
-            <div class="pick__description">
-              <div class="pick__description__text">Larger storage</div>
-              <div class="pick__description__sub">Extra 1TB of cloud save</div>
-            </div>
-            <div class="pick__description__price">+$2/mo</div>
-          </article>
-          <article class="pick">
-            <div class="pick__contain">
-              <input type="checkbox" class="pick__check" />
-            </div>
-            <div class="pick__description">
-              <div class="pick__description__text">Customizable profile</div>
-              <div class="pick__description__sub">Custom theme on your profile</div>
-            </div>
-            <div class="pick__description__price">+$2/mo</div>
-          </article>
-        </div>
-      </section>
-      <div class="step__fill">
-        <div class="step__content__btn step__content__btn--flex">
-          <button type="button" class="step__btn step__btn--back" id="step__goBack__three">Go Back</button>
-          <button type="button" class="step__btn" id="btn__three">Next Step</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Step 3 end -->
-
-    <!-- Step 4 start -->
-
-    <section class="step__content" id="step__content4">
-      <section class="step">
-        <div class="step__wrapper">
-          <article class="step__title">
-            <h2>Finishing up</h2>
-            <p>Double-check everything looks OK before confirming.</p>
-          </article>
-          <article class="finishing finishing__border">
-            <div class="finishing__description">
-              <div class="finishing__description__text">Arcade (Monthly)</div>
-              <div class="finishing__description__sub">Change</div>
-            </div>
-            <div class="finishing__description__price finishing__description__price--bold">$9/mo</div>
-          </article>
-          <article class="finishing finishing--noMargin">
-            <div class="finishing__description__sub">Online service</div>
-            <div class="finishing__description__price">+$1/mo</div>
-          </article>
-          <article class="finishing finishing--noMargin">
-            <div class="finishing__description__sub">Larger storage</div>
-            <div class="finishing__description__price">+$2/mo</div>
-          </article>
-          <article class="finishing">
-            <div class="finishing__description__sub">Total (per month)</div>
-            <div class="finishing__total__price">+$12/mo</div>
-          </article>
-        </div>
-      </section>
-      <div class="step__fill">
-        <div class="step__content__btn step__content__btn--flex">
-          <button type="button" class="step__btn step__btn--back" id="step__goBack__four">Go Back</button>
-          <button type="button" class="step__btn step__btn--confirm" id="btn__four">Confirm</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Step 4 end -->
-
-    <!-- Step 5 start -->
-
-    <section class="step__content step__content--final" id="step__content5">
-      <section class="step">
-
-        <article class="step__wrapper">
-          <div class="wrapper__img">
-            <img src="./assets/images/icon-thank-you.svg" alt="icon-thanks" class="wrapper__img__thanks">
+        </article>
+        <article class="sidebar__two sidebar__numbers">
+          <div class="sidebar__number" id="sidebar__number__2">2</div>
+          <div class="sidebar__info">
+            <div class="sidebar__info__number">STEP 2</div>
+            <div class="sidebar__info__text">SELECT PLAN</div>
           </div>
-          <article class="step__title step__title--center">
-            <h2>Thank you!</h2>
-            <p>
-              Thanks for confirming your subscription! We hope you have fun
-              using our platform. If you ever need support, please feel free
-              to email us at support@loremgaming.com.
-            </p>
-          </article>
+        </article>
+        <article class="sidebar__three sidebar__numbers">
+          <div class="sidebar__number" id="sidebar__number__3">3</div>
+          <div class="sidebar__info">
+            <div class="sidebar__info__number">STEP 3</div>
+            <div class="sidebar__info__text">ADD-ONS</div>
+          </div>
+        </article>
+        <article class="sidebar__four sidebar__numbers">
+          <div class="sidebar__number" id="sidebar__number__4">4</div>
+          <div class="sidebar__info">
+            <div class="sidebar__info__number">STEP 4</div>
+            <div class="sidebar__info__text">SUMMARY</div>
+          </div>
         </article>
       </section>
-      <div class="step__fill step__fill--modified"></div>
+
+      <!-- Sidebar end -->
+
+      <section class="container__all">
+        <!-- Step 1 start -->
+        <section class="step__content" id="step__content1">
+          <section class="step">
+            <div class="step__wrapper">
+              <article class="step__title">
+                <h2>Personal info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+              </article>
+              <article class="step__form">
+                <label class="step__label">Name</label>
+                <input type="text" class="step__input" placeholder="e.g. Stephen King" />
+                <label class="step__label">Email Address</label>
+                <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com" />
+                <label class="step__label">Phone Number</label>
+                <input type="text" class="step__input" placeholder="e.g. +1 234 567 890" />
+              </article>
+            </div>
+          </section>
+          <div class="step__fill">
+            <div class="step__content__btn">
+              <button type="button" class="step__btn" id="btn__one">Next Step</button>
+            </div>
+          </div>
+        </section>
+        <!-- Step 1 end -->
+
+        <!-- Step 2 start -->
+
+        <section class="step__content" id="step__content2">
+          <section class="step">
+            <div class="step__wrapper">
+              <article class="step__title">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing.</p>
+              </article>
+              <label for="check__plan__1">
+                <input type="radio" class="check__step__2" id="check__plan__1" name="radio__btn">
+                <article class="plan plan__1">
+                  <div class="plan__contain">
+                    <img src="./assets/images/icon-arcade.svg" class="plan__img" alt="icono-arcade">
+                  </div>
+                  <div class="plan__description">
+                    <div class="plan__description__text">Arcade</div>
+                    <div class="plan__description__price">$9/mo</div>
+                  </div>
+                </article>
+              </label>
+              <label for="check__plan__2">
+                <input type="radio" class="check__step__2" id="check__plan__2" name="radio__btn">
+                <article class="plan plan__2">
+                  <div class="plan__contain">
+                    <img src="./assets/images/icon-advanced.svg" class="plan__img" alt="icono-arcade">
+                  </div>
+                  <div class="plan__description">
+                    <div class="plan__description__text">Advance</div>
+                    <div class="plan__description__price">$12/mo</div>
+                  </div>
+                </article>
+              </label>
+              <label for="check__plan__3">
+                <input type="radio" class="check__step__2" id="check__plan__3" name="radio__btn">
+                <article class="plan plan__3">
+                  <div class="plan__contain">
+                    <img src="./assets/images/icon-pro.svg" class="plan__img" alt="icono-arcade">
+                  </div>
+                  <div class="plan__description">
+                    <div class="plan__description__text">Pro</div>
+                    <div class="plan__description__price">$15/mo</div>
+                  </div>
+                </article>
+              </label>
+              <div class="plan__toggle">
+                <div class="plan__toggle__text">Monthly</div>
+                <div>
+                  <input type="checkbox" class="plan__offscreen" id="toggle">
+                  <label for="toggle" class="plan__switch"></label>
+                </div>
+                <div class="plan__toggle__text plan__toggle__text--disabled">Yearly</div>
+              </div>
+            </div>
+          </section>
+          <div class="step__fill">
+            <div class="step__content__btn step__content__btn--flex">
+              <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
+              <button type="button" class="step__btn" id="btn__two">Next Step</button>
+            </div>
+          </div>
+        </section>
+        <!-- Step 2 end -->
+
+        <!-- Step 3 start -->
+        <section class="step__content" id="step__content3">
+          <section class="step">
+            <div class="step__wrapper">
+              <article class="step__title">
+                <h2>Pick add-ons</h2>
+                <p>Add-ons help enhance your gaming experience.</p>
+              </article>
+              <article class="pick pick1">
+                <input type="checkbox" class="pick__check" id="check__1" />
+                <div class="pick__description">
+                  <div class="pick__description__text">Online service</div>
+                  <div class="pick__description__sub">Access to multiplayer games</div>
+                </div>
+                <div class="pick__description__price">+$1/mo</div>
+              </article>
+              <article class="pick pick2">
+                <input type="checkbox" class="pick__check" id="check__2" />
+                <div class="pick__description">
+                  <div class="pick__description__text">Larger storage</div>
+                  <div class="pick__description__sub">Extra 1TB of cloud save</div>
+                </div>
+                <div class="pick__description__price">+$2/mo</div>
+              </article>
+              <article class="pick pick3">
+                <input type="checkbox" class="pick__check" id="check__3" />
+                <div class="pick__description">
+                  <div class="pick__description__text">Customizable profile</div>
+                  <div class="pick__description__sub">Custom theme on your profile</div>
+                </div>
+                <div class="pick__description__price">+$2/mo</div>
+              </article>
+            </div>
+          </section>
+          <div class="step__fill">
+            <div class="step__content__btn step__content__btn--flex">
+              <button type="button" class="step__btn step__btn--back" id="step__goBack__three">Go Back</button>
+              <button type="button" class="step__btn" id="btn__three">Next Step</button>
+            </div>
+          </div>
+        </section>
+        <!-- Step 3 end -->
+
+        <!-- Step 4 start -->
+        <section class="step__content" id="step__content4">
+          <section class="step">
+            <div class="step__wrapper">
+              <article class="step__title">
+                <h2>Finishing up</h2>
+                <p>Double-check everything looks OK before confirming.</p>
+              </article>
+              <article class="finishing finishing__border">
+                <div class="finishing__description">
+                  <div class="finishing__description__text">Arcade (Monthly)</div>
+                  <div class="finishing__description__sub">Change</div>
+                </div>
+                <div class="finishing__description__price finishing__description__price--bold">$9/mo</div>
+              </article>
+              <article class="finishing finishing--noMargin">
+                <div class="finishing__description__sub">Online service</div>
+                <div class="finishing__description__price">+$1/mo</div>
+              </article>
+              <article class="finishing finishing--noMargin">
+                <div class="finishing__description__sub">Larger storage</div>
+                <div class="finishing__description__price">+$2/mo</div>
+              </article>
+              <article class="finishing">
+                <div class="finishing__description__sub">Total (per month)</div>
+                <div class="finishing__total__price">+$12/mo</div>
+              </article>
+            </div>
+          </section>
+          <div class="step__fill">
+            <div class="step__content__btn step__content__btn--flex">
+              <button type="button" class="step__btn step__btn--back" id="step__goBack__four">Go Back</button>
+              <button type="button" class="step__btn step__btn--confirm" id="btn__four">Confirm</button>
+            </div>
+          </div>
+        </section>
+        <!-- Step 4 end -->
+
+        <!-- Step 5 start -->
+        <section class="step__content step__content--final" id="step__content5">
+          <section class="step">
+
+            <article class="step__wrapper">
+              <div class="wrapper__img">
+                <img src="./assets/images/icon-thank-you.svg" alt="icon-thanks" class="wrapper__img__thanks">
+              </div>
+              <article class="step__title step__title--center">
+                <h2>Thank you!</h2>
+                <p>
+                  Thanks for confirming your subscription! We hope you have fun
+                  using our platform. If you ever need support, please feel free
+                  to email us at support@loremgaming.com.
+                </p>
+              </article>
+            </article>
+          </section>
+          <!-- <div class="step__fill step__fill--modified"></div> -->
+        </section>
+        <!-- Step 5 end -->
+      </section>
     </section>
-
-    <!-- Step 5 end -->
-  </section>
-
   </main>
 
   <!-- <div class="attribution">

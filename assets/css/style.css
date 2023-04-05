@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: gray;
+  background-color: hsl(217, 100%, 97%);
 }
 
 a {
@@ -30,12 +30,13 @@ body, html {
   background-image: url(../images/bg-sidebar-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 100%;
+  width: 100%;
   height: 11rem;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 }
 
 .sidebar__number {
@@ -58,30 +59,19 @@ body, html {
   display: none;
 }
 
-.step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .step__content {
-  width: 16.6%;
-  display: inline-block;
-}
-.step__content--final {
-  margin: -2rem 0;
+  width: 16.7%;
 }
 .step__wrapper {
-  width: 90%;
-  padding: 0 1rem 2rem;
   background-color: hsl(231, 100%, 99%);
-  border-radius: 0.5rem;
-  position: absolute;
-  top: -75px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 .step__title h2 {
   font-size: 1.7rem;
-  margin: 1.5rem 0 1rem;
+  margin: 0;
   color: hsl(213, 96%, 18%);
 }
 .step__title p {
@@ -107,10 +97,10 @@ body, html {
 
 .step__fill {
   width: 100%;
-  height: 30rem;
   background-color: hsl(217, 100%, 97%);
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 .step__fill--modified {
   padding: 0.8rem 0;
@@ -136,10 +126,12 @@ body, html {
 
 .step__content__btn {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   display: flex;
   justify-content: flex-end;
   background-color: hsl(231, 100%, 99%);
+  position: fixed;
+  bottom: 0;
 }
 .step__content__btn--flex {
   justify-content: space-between;
@@ -199,6 +191,10 @@ body, html {
   display: none;
 }
 
+.check__step__2 {
+  display: none;
+}
+
 input[type=checkbox]:checked + .plan__switch::after {
   transform: translateX(30px);
   background-color: hsl(229, 24%, 87%);
@@ -217,6 +213,9 @@ input[type=checkbox]:checked + .plan__switch {
   border-radius: 0.5rem;
   padding: 1rem;
 }
+.pick__contain {
+  border: 1px solid green;
+}
 .pick__check {
   width: 18px;
   height: 18px;
@@ -233,6 +232,10 @@ input[type=checkbox]:checked + .plan__switch {
 .pick__description__price {
   color: hsl(243, 100%, 62%);
   font-size: 0.8rem;
+}
+
+.border {
+  border-color: hsl(243, 100%, 62%);
 }
 
 .finishing {
@@ -283,64 +286,80 @@ input[type=checkbox]:checked + .plan__switch {
 /*step 3*/
 /*step 4*/
 /*step 5*/
-.container {
+.container__wrapper {
   min-width: 375px;
   max-width: 1440px;
-  overflow: hidden;
   margin: 0 auto;
+  overflow: hidden;
   background-color: hsl(0, 0%, 100%);
 }
 .container__all {
-  display: inline-block;
+  min-width: 375px;
   width: 600%;
+  display: flex;
+  position: relative;
+  top: -75px;
 }
 
 @media screen and (min-width: 1440px) {
-  body {
-    background-color: hsl(0, 0%, 100%);
+  .sidebar__numbers {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
-  .container {
-    max-width: 1440px;
-    display: grid;
-    grid-template-columns: 0.6fr 3fr;
-    padding: 2rem 2rem 2rem 0;
+  .sidebar__info__number {
+    font-size: 0.7rem;
+    color: hsl(229, 24%, 87%);
+    margin-bottom: 0.2rem;
   }
-  .sidebar__img {
-    height: 100%;
-    background-image: url(../images/bg-sidebar-desktop.svg);
-    background-size: contain;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 1rem;
-    z-index: 100;
+  .sidebar__info__text {
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 100%);
   }
   .sidebar__info {
     display: block;
   }
-  .sidebar__info__number {
-    font-size: 0.8rem;
-    color: hsl(231, 11%, 63%);
-  }
-  .sidebar__info__text {
-    color: hsl(0, 0%, 100%);
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
-  .sidebar__numbers {
-    display: flex;
-    gap: 1rem;
-  }
-  .step__wrapper {
-    top: -12px;
-  }
-  .step__fill, .step__wrapper {
+  .container {
+    max-width: 1440px;
+    margin: 5rem auto 0;
+    padding: 1rem;
     background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
   }
   .step__content {
-    margin-left: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .step__wrapper {
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 2rem;
   }
   .step__content__btn {
-    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    padding: 2rem 8rem;
+  }
+  .container__all {
+    position: none;
+    top: 0;
+    left: 0;
+  }
+  .container__wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+  }
+  .container__wrapper .sidebar__img {
+    background-image: url(../images/bg-sidebar-desktop.svg);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    padding: 3rem 0 0 3rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 50;
+    border-radius: 0.5rem;
   }
 }
 

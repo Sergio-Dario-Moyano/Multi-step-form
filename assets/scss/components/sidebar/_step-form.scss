@@ -2,34 +2,25 @@
 @use "../../utilities/mixins";
 
 .step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   &__content {
-    width: 16.6%;
-    display: inline-block;
+    width: 16.7%;
 
-    &--final {
-      margin: -2rem 0;
-    }
   }
 
   &__wrapper {
-    width: 90%;
-    padding: 0 1rem 2rem;
     background-color: variables.$Alabaster;
-    border-radius: 0.5rem;
-    position: absolute;
-    top: -75px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 1rem;
   }
 
   &__title {
 
     h2 {
       font-size: 1.7rem;
-      margin: 1.5rem 0 1rem;
+      margin: 0;
       color: variables.$Marine-blue;
     }
 
