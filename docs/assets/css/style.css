@@ -94,6 +94,14 @@ body, html {
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
+.step__form input[type=number]::-webkit-inner-spin-button,
+.step__form input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.step__form input[type=number] {
+  appearance: textfield;
+}
 
 .step__fill {
   width: 100%;
