@@ -26,6 +26,10 @@ body, html {
   transition: all 0.3s ease-in-out;
 }
 
+.borderError {
+  border: 2px solid red !important;
+}
+
 .sidebar__img {
   background-image: url(../images/bg-sidebar-mobile.svg);
   background-size: cover;
@@ -102,6 +106,13 @@ body, html {
 .step__form input[type=number] {
   appearance: textfield;
 }
+.step__error {
+  display: none;
+  height: 2rem;
+  line-height: 2rem;
+  margin-bottom: 0.3rem;
+  color: #ff0000;
+}
 
 .step__fill {
   width: 100%;
@@ -122,14 +133,17 @@ body, html {
   border: none;
   padding: 0.8rem 1.3rem;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
-.step__btn--back {
-  background-color: transparent;
-  color: hsl(229, 24%, 87%);
-  font-weight: 700;
+.step__btn:hover {
+  background-color: hsl(243, 100%, 62%);
 }
 .step__btn--confirm {
   background-color: hsl(243, 100%, 62%);
+}
+.step__btn--disabled {
+  pointer-events: none;
+  background-color: hsl(229, 24%, 87%);
 }
 
 .step__content__btn {
@@ -155,6 +169,10 @@ body, html {
   gap: 1rem;
   padding-left: 1rem;
 }
+.plan:hover {
+  background-color: hsl(217, 100%, 97%);
+  cursor: pointer;
+}
 .plan__description__text {
   font-weight: 500;
   color: hsl(213, 96%, 18%);
@@ -171,9 +189,6 @@ body, html {
 }
 .plan__toggle__text {
   font-weight: 500;
-}
-.plan__toggle__text--disabled {
-  color: hsl(229, 24%, 87%);
 }
 .plan__switch {
   position: relative;
@@ -205,11 +220,11 @@ body, html {
 
 input[type=checkbox]:checked + .plan__switch::after {
   transform: translateX(30px);
-  background-color: hsl(229, 24%, 87%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 input[type=checkbox]:checked + .plan__switch {
-  background-color: hsl(231, 11%, 63%);
+  background-color: hsl(243, 100%, 62%);
 }
 
 .pick {
@@ -228,6 +243,7 @@ input[type=checkbox]:checked + .plan__switch {
   width: 18px;
   height: 18px;
   accent-color: hsl(243, 100%, 62%);
+  cursor: pointer;
 }
 .pick__description__text {
   font-weight: bold;
@@ -334,10 +350,11 @@ input[type=checkbox]:checked + .plan__switch {
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.5rem;
   }
-  .step__content {
+  .step__content, #content__step__four {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
   }
   .step__wrapper {
     background-color: hsl(0, 0%, 100%);

@@ -50,10 +50,11 @@
     border-radius: 0.5rem;
   }
 
-  .step__content {
+  .step__content, #content__step__four {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
   }
 
   .step__wrapper {

@@ -10,6 +10,10 @@
   align-items: center;
   gap: 1rem;
   padding-left: 1rem;
+  &:hover {
+    background-color: variables.$Magnolia;
+    cursor: pointer;
+  }
 
   &__description__text {
     font-weight: 500;
@@ -29,10 +33,6 @@
 
     &__text {
       font-weight: 500;
-    }
-
-    &__text--disabled {
-      color: variables.$Light-gray;
     }
   }
 
@@ -67,11 +67,11 @@
   display: none;
 }
 
-input[type='checkbox']:checked+.plan__switch::after {
+input[type='checkbox']:checked + .plan__switch::after {
   transform: translateX(30px);
-  background-color: variables.$Light-gray;
+  background-color: variables.$White;
 }
 
 input[type='checkbox']:checked+.plan__switch {
-  background-color: variables.$Cool-gray;
+  background-color: variables.$Purplish-blue;
 }

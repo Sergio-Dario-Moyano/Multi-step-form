@@ -59,4 +59,12 @@
       appearance: textfield;
     }
   }
+
+  &__error {
+    display: none;
+    height: 2rem;
+    line-height: 2rem;
+    margin-bottom: 0.3rem;
+    color: #ff0000;
+  }
 }

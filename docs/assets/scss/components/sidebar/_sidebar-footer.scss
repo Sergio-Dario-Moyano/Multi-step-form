@@ -16,14 +16,13 @@
 .step__btn {
   @include mixins.button-next();
 
-  &--back {
-    background-color: transparent;
-    color: variables.$Light-gray;
-    font-weight: 700;
-  }
-
   &--confirm {
     background-color: variables.$Purplish-blue;
+  }
+
+  &--disabled {
+    pointer-events:none;
+    background-color: variables.$Light-gray;
   }
 }
 

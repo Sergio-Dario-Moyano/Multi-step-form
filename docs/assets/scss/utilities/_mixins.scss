@@ -19,4 +19,8 @@
   border: none;
   padding: 0.8rem 1.3rem;
   border-radius: 0.3rem;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$Purplish-blue;
+  }
 }

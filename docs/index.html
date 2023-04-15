@@ -16,7 +16,7 @@
     <section class="container__wrapper">
       <section class="sidebar__img">
         <article class="sidebar__one sidebar__numbers">
-          <div class="sidebar__number sidebar__paint" id="sidebar__number__1">1</div>
+          <div class="sidebar__number" id="sidebar__number__1">1</div>
           <div class="sidebar__info">
             <div class="sidebar__info__number">STEP 1</div>
             <div class="sidebar__info__text">YOUR INFO</div>
@@ -58,17 +58,21 @@
               </article>
               <article class="step__form">
                 <label class="step__label">Name</label>
-                <input type="text" class="step__input" placeholder="e.g. Stephen King" />
+                <strong class="step__error step__error__nombre">* ERROR: El campo nombre no puede estar vacío</strong>
+                <input type="text" class="step__input" placeholder="e.g. Stephen King" id="name" tabindex="1" />
                 <label class="step__label">Email Address</label>
-                <input type="text" class="step__input" placeholder="e.g. stephenking@lorem.com" />
+                <strong class="step__error step__error__email">* ERROR: El campo Email no puede estar vacío</strong>
+                <input type="email" class="step__input" placeholder="e.g. stephenking@lorem.com" id="email"
+                tabindex="2" />
                 <label class="step__label">Phone Number</label>
-                <input type="number" class="step__input" placeholder="e.g. +1 234 567 890" />
+                <strong class="step__error step__error__phone">* ERROR: El campo número de teléfono no puede estar vacío</strong>
+                <input type="number" class="step__input" placeholder="e.g. +1 234 567 890" id="phone" tabindex="3" />
               </article>
             </div>
           </section>
           <div class="step__fill">
             <div class="step__content__btn">
-              <button type="button" class="step__btn" id="btn__one">Next Step</button>
+              <button type="button" class="step__btn step__btn--disabled" id="btn__one" tabindex="4">Next Step</button>
             </div>
           </div>
         </section>
@@ -84,7 +88,7 @@
                 <p>You have the option of monthly or yearly billing.</p>
               </article>
               <label for="check__plan__1">
-                <input type="radio" class="check__step__2" id="check__plan__1" name="radio__btn">
+                <input type="radio" class="check__step__2" id="check__plan__1" name="radio__btn" value=9 tabindex="1">
                 <article class="plan plan__1">
                   <div class="plan__contain">
                     <img src="./assets/images/icon-arcade.svg" class="plan__img" alt="icono-arcade">
@@ -96,7 +100,7 @@
                 </article>
               </label>
               <label for="check__plan__2">
-                <input type="radio" class="check__step__2" id="check__plan__2" name="radio__btn">
+                <input type="radio" class="check__step__2" id="check__plan__2" name="radio__btn" value=12 tabindex="2">
                 <article class="plan plan__2">
                   <div class="plan__contain">
                     <img src="./assets/images/icon-advanced.svg" class="plan__img" alt="icono-arcade">
@@ -108,7 +112,7 @@
                 </article>
               </label>
               <label for="check__plan__3">
-                <input type="radio" class="check__step__2" id="check__plan__3" name="radio__btn">
+                <input type="radio" class="check__step__2" id="check__plan__3" name="radio__btn" value=15 tabindex="3">
                 <article class="plan plan__3">
                   <div class="plan__contain">
                     <img src="./assets/images/icon-pro.svg" class="plan__img" alt="icono-arcade">
@@ -122,7 +126,7 @@
               <div class="plan__toggle">
                 <div class="plan__toggle__text">Monthly</div>
                 <div>
-                  <input type="checkbox" class="plan__offscreen" id="toggle">
+                  <input type="checkbox" class="plan__offscreen" id="toggle" tabindex="4">
                   <label for="toggle" class="plan__switch"></label>
                 </div>
                 <div class="plan__toggle__text plan__toggle__text--disabled">Yearly</div>
@@ -131,8 +135,9 @@
           </section>
           <div class="step__fill">
             <div class="step__content__btn step__content__btn--flex">
-              <button type="button" class="step__btn step__btn--back" id="step__goBack__two">Go Back</button>
-              <button type="button" class="step__btn" id="btn__two">Next Step</button>
+              <button type="button" class="step__btn step__btn--back" id="step__goBack__two" tabindex="-1">Go
+                Back</button>
+              <button type="button" class="step__btn" id="btn__two" tabindex="-1">Next Step</button>
             </div>
           </div>
         </section>
@@ -147,7 +152,7 @@
                 <p>Add-ons help enhance your gaming experience.</p>
               </article>
               <article class="pick pick1">
-                <input type="checkbox" class="pick__check" id="check__1" />
+                <input type="checkbox" class="pick__check" id="check__1" value=1 name="check__input" tabindex="-1" />
                 <div class="pick__description">
                   <div class="pick__description__text">Online service</div>
                   <div class="pick__description__sub">Access to multiplayer games</div>
@@ -155,7 +160,7 @@
                 <div class="pick__description__price">+$1/mo</div>
               </article>
               <article class="pick pick2">
-                <input type="checkbox" class="pick__check" id="check__2" />
+                <input type="checkbox" class="pick__check" id="check__2" value=2 name="check__input" tabindex="-1" />
                 <div class="pick__description">
                   <div class="pick__description__text">Larger storage</div>
                   <div class="pick__description__sub">Extra 1TB of cloud save</div>
@@ -163,7 +168,7 @@
                 <div class="pick__description__price">+$2/mo</div>
               </article>
               <article class="pick pick3">
-                <input type="checkbox" class="pick__check" id="check__3" />
+                <input type="checkbox" class="pick__check" id="check__3" value=2 name="check__input" tabindex="-1" />
                 <div class="pick__description">
                   <div class="pick__description__text">Customizable profile</div>
                   <div class="pick__description__sub">Custom theme on your profile</div>
@@ -174,55 +179,21 @@
           </section>
           <div class="step__fill">
             <div class="step__content__btn step__content__btn--flex">
-              <button type="button" class="step__btn step__btn--back" id="step__goBack__three">Go Back</button>
-              <button type="button" class="step__btn" id="btn__three">Next Step</button>
+              <button type="button" class="step__btn step__btn--back" id="step__goBack__three" tabindex="-1">Go
+                Back</button>
+              <button type="button" class="step__btn" id="btn__three" tabindex="-1">Next Step</button>
             </div>
           </div>
         </section>
         <!-- Step 3 end -->
 
         <!-- Step 4 start -->
-        <section class="step__content" id="step__content4">
-          <section class="step">
-            <div class="step__wrapper">
-              <article class="step__title">
-                <h2>Finishing up</h2>
-                <p>Double-check everything looks OK before confirming.</p>
-              </article>
-              <article class="finishing finishing__border">
-                <div class="finishing__description">
-                  <div class="finishing__description__text">Arcade (Monthly)</div>
-                  <div class="finishing__description__sub">Change</div>
-                </div>
-                <div class="finishing__description__price finishing__description__price--bold">$9/mo</div>
-              </article>
-              <article class="finishing finishing--noMargin">
-                <div class="finishing__description__sub">Online service</div>
-                <div class="finishing__description__price">+$1/mo</div>
-              </article>
-              <article class="finishing finishing--noMargin">
-                <div class="finishing__description__sub">Larger storage</div>
-                <div class="finishing__description__price">+$2/mo</div>
-              </article>
-              <article class="finishing">
-                <div class="finishing__description__sub">Total (per month)</div>
-                <div class="finishing__total__price">+$12/mo</div>
-              </article>
-            </div>
-          </section>
-          <div class="step__fill">
-            <div class="step__content__btn step__content__btn--flex">
-              <button type="button" class="step__btn step__btn--back" id="step__goBack__four">Go Back</button>
-              <button type="button" class="step__btn step__btn--confirm" id="btn__four">Confirm</button>
-            </div>
-          </div>
-        </section>
+        <section class="step__content" id="step__content4"></section>
         <!-- Step 4 end -->
 
         <!-- Step 5 start -->
         <section class="step__content step__content--final" id="step__content5">
           <section class="step">
-
             <article class="step__wrapper">
               <div class="wrapper__img">
                 <img src="./assets/images/icon-thank-you.svg" alt="icon-thanks" class="wrapper__img__thanks">
@@ -237,7 +208,6 @@
               </article>
             </article>
           </section>
-          <!-- <div class="step__fill step__fill--modified"></div> -->
         </section>
         <!-- Step 5 end -->
       </section>
