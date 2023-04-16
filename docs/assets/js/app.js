@@ -31,15 +31,15 @@ circleSteps[cont].classList.add('sidebar__paint')
 
 //Código de botones NEXT
 
-  const btn1 = document.querySelector('#btn__one').addEventListener("click", () => {
-    const stepContent1 = document.querySelector('#step__content1');
-    stepContent1.style.marginLeft = `${contador = -16.73}%`
-    stepContent1.classList.add('move__left')
-    circleSteps[cont].classList.remove('sidebar__paint')
-    circleSteps[cont + 1].classList.add('sidebar__paint')
-    cont += 1;
-    misRadios(parametros)
-  })
+const btn1 = document.querySelector('#btn__one').addEventListener("click", () => {
+  const stepContent1 = document.querySelector('#step__content1');
+  stepContent1.style.marginLeft = `${contador = -16.73}%`
+  stepContent1.classList.add('move__left')
+  circleSteps[cont].classList.remove('sidebar__paint')
+  circleSteps[cont + 1].classList.add('sidebar__paint')
+  cont += 1;
+  misRadios(parametros)
+})
 
 const btn2 = document.querySelector('#btn__two').addEventListener("click", () => {
   const stepContent2 = document.querySelector('#step__content2');
@@ -86,8 +86,6 @@ const stepGoBackThree = document.querySelector('#step__goBack__three').addEventL
 const inputName = document.querySelector('#name');
 const inputEmail = document.querySelector('#email');
 const inputPhone = document.querySelector('#phone');
-
-
 const toggle = document.querySelector('#toggle');
 
 //Errors
@@ -97,39 +95,41 @@ const errorPhone = document.querySelector('.step__error__phone');
 //Funciones
 
 const validar = () => {
-  let validado = true;
+  let validate = true;
   const regExpEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
   const patron = new RegExp(regExpEmail);
   if ((inputName.value.trim() === "" || inputName.value.trim().length < 3)) {
     errorNombre.style.display = "inline-block";
     inputName.style.border = "1px solid red";
-    validado = false
-  } else if (inputName.value.trim().length >= 3) {
+    document.querySelector('#btn__one').classList.add("step__btn--disabled")
+    return false;
+  } else {
     errorNombre.style.display = "none";
     inputName.style.border = "1px solid green"
   }
 
-  if (patron.test(inputEmail.value)) {
-    errorEmail.style.display = "none";
-    inputEmail.style.border = "1px solid green"
-    validado = false
-  } else {
+  if (!patron.test(inputEmail.value)) {
     errorEmail.style.display = "inline-block";
     inputEmail.style.border = "1px solid red"
+    document.querySelector('#btn__one').classList.add("step__btn--disabled")
+    return false;
+  } else {
+    errorEmail.style.display = "none";
+    inputEmail.style.border = "1px solid green"
   }
 
   if (inputPhone.value.trim().length === 0 || inputPhone.value.trim().length < 6) {
     errorPhone.style.display = "inline-block";
     inputPhone.style.border = "1px solid red"
-    validado = false
+    document.querySelector('#btn__one').classList.add("step__btn--disabled")
+    return false;
   } else {
     errorPhone.style.display = "none";
     inputPhone.style.border = "1px solid green"
   }
 
-  if(inputName.value !== "" && inputEmail !== "" && inputPhone !== "" && validado) {
+  if (validate) {
     document.querySelector('#btn__one').classList.remove("step__btn--disabled")
-    // console.log(validado);
   }
 }
 
