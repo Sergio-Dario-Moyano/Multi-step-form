@@ -7,6 +7,7 @@
 
 body {
   background-color: hsl(217, 100%, 97%);
+  margin: 0;
 }
 
 a {
@@ -109,8 +110,7 @@ body, html {
 .step__error {
   display: none;
   height: 2rem;
-  line-height: 2rem;
-  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
   color: #ff0000;
 }
 
@@ -148,12 +148,12 @@ body, html {
 
 .step__content__btn {
   width: 100%;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: flex-end;
   background-color: hsl(231, 100%, 99%);
   position: fixed;
-  bottom: 0;
+  bottom: 3rem;
 }
 .step__content__btn--flex {
   justify-content: space-between;
@@ -325,6 +325,15 @@ input[type=checkbox]:checked + .plan__switch {
   top: -75px;
 }
 
+.attribution {
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
 @media screen and (min-width: 1440px) {
   .sidebar__numbers {
     display: flex;
@@ -350,6 +359,16 @@ input[type=checkbox]:checked + .plan__switch {
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.5rem;
   }
+  .attribution {
+    font-size: 1.1rem;
+    text-align: left;
+    bottom: calc(100% - 44rem);
+  }
+  .step__error {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-bottom: 0.3rem;
+  }
   .step__content, #content__step__four {
     display: flex;
     flex-direction: column;
@@ -363,6 +382,7 @@ input[type=checkbox]:checked + .plan__switch {
   .step__content__btn {
     position: relative;
     padding: 2rem 8rem;
+    bottom: 0;
   }
   .container__all {
     position: none;

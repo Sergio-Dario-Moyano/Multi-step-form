@@ -1,7 +1,7 @@
 //Globals
 let contador = 0;
 let cont = 0;
-const parametros = [
+const planData = [
   {
     plan: "",
     pricePlan: 0,
@@ -38,7 +38,7 @@ const btn1 = document.querySelector('#btn__one').addEventListener("click", () =>
   circleSteps[cont].classList.remove('sidebar__paint')
   circleSteps[cont + 1].classList.add('sidebar__paint')
   cont += 1;
-  misRadios(parametros)
+  misRadios(planData)
 })
 
 const btn2 = document.querySelector('#btn__two').addEventListener("click", () => {
@@ -57,7 +57,7 @@ const btn3 = document.querySelector('#btn__three').addEventListener("click", () 
   circleSteps[cont].classList.remove('sidebar__paint')
   circleSteps[cont + 1].classList.add('sidebar__paint')
   cont += 1;
-  crearTemplate(parametros)
+  crearTemplate(planData)
 })
 
 //Código de botones BACK
@@ -92,9 +92,9 @@ const toggle = document.querySelector('#toggle');
 const errorNombre = document.querySelector('.step__error__nombre');
 const errorEmail = document.querySelector('.step__error__email');
 const errorPhone = document.querySelector('.step__error__phone');
-//Funciones
 
-const validar = () => {
+//Funciones
+const validarCampos = () => {
   let validate = true;
   const regExpEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
   const patron = new RegExp(regExpEmail);
@@ -134,20 +134,20 @@ const validar = () => {
 }
 
 //Listeners
-inputName.addEventListener("keyup", validar)
-inputEmail.addEventListener("keyup", validar)
-inputPhone.addEventListener("keyup", validar)
+inputName.addEventListener("keyup", validarCampos)
+inputEmail.addEventListener("keyup", validarCampos)
+inputPhone.addEventListener("keyup", validarCampos)
 
 const radios = document.querySelectorAll('.check__step__2')
 const plan = document.querySelectorAll('.plan')
 const text = document.querySelectorAll('.plan .plan__description__text')
 
-const misRadios = (objeto) => {
+const misRadios = (data) => {
   document.querySelector('#toggle').addEventListener("change", (e) => {
     if (e.target.checked) {
-      objeto[0].toggle = "Yearly";
+      data[0].toggle = "Yearly";
     } else {
-      objeto[0].toggle = "Monthly";
+      data[0].toggle = "Monthly";
     }
   })
   radios.forEach((elem, index) => {
@@ -155,9 +155,9 @@ const misRadios = (objeto) => {
       clean(plan);
       if (e.target.checked) {
         plan[index].classList.add("border")
-        objeto[0].plan = text[index].textContent;
-        objeto[0].pricePlan = parseInt(e.target.value)
-        misChecks(objeto)
+        data[0].plan = text[index].textContent;
+        data[0].pricePlan = parseInt(e.target.value)
+        misChecks(data)
       }
     })
   })
@@ -173,17 +173,17 @@ const pickCheck = document.querySelectorAll('.pick__check');
 const pick = document.querySelectorAll('.pick');
 const pickText = document.querySelectorAll('.pick .pick__description__text')
 
-const misChecks = (objeto) => {
+const misChecks = (data) => {
   pickCheck.forEach((elem, index) => {
     elem.addEventListener("change", (e) => {
       if (e.target.checked) {
         pick[index].classList.add("border")
-        objeto[0].checks[index].title = pickText[index].textContent;
-        objeto[0].checks[index].price = parseInt(e.target.value);
+        data[0].checks[index].title = pickText[index].textContent;
+        data[0].checks[index].price = parseInt(e.target.value);
       } else {
         pick[index].classList.remove("border")
-        objeto[0].checks[index].title = "";
-        objeto[0].checks[index].price = 0;
+        data[0].checks[index].title = "";
+        data[0].checks[index].price = 0;
       }
     })
   })
